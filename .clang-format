@@ -1,0 +1,32 @@
+---
+Language: Cpp
+BasedOnStyle: LLVM
+Standard: c++20
+ColumnLimit: 120
+IndentWidth: 4
+AccessModifierOffset: -4
+IndentCaseLabels: true
+NamespaceIndentation: None
+FixNamespaceComments: true
+PointerAlignment: Left
+BreakBeforeBraces: Allman
+InsertBraces: true
+AllowShortBlocksOnASingleLine: Never
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortLambdasOnASingleLine: All
+BreakConstructorInitializers: BeforeComma
+PackConstructorInitializers: Never
+MainIncludeChar: Any
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^<(Game\.h|(camera|core|input|map|player)/)'
+    Priority: 1
+  - Regex: '^<(raylib|raymath|rlgl|tmx)\.h>'
+    Priority: 2
+  - Regex: '^<[a-z_]+>'
+    Priority: 3
+  - Regex: '.*'
+    Priority: 4
